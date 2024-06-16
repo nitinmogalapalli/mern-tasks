@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 7</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: whitesmoke;
+      }
+
+      .outer {
+        background-color: #a22a57;
+        padding: 20px;
+        margin: 40px;
+        margin-left: 100px;
+        margin-right: 800px;
+        margin-top: 0px;
+        padding-left: 20px;
+        width: 700px;
+      }
+      .inner {
+        background-color: #752041;
+        padding-top: 30px;
+        margin: 60px;
+        padding: 30px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .container label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 0px;
+      }
+
+      .gender {
+        display: flex;
+        width: 245px; /* Adjusting width to fit the gender field */
+      }
+
+      .gender label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .container input,
+      .container textarea,
+      .container select {
+        display: flex;
+        justify-content: flex-start;
+        width: 50%;
+        padding: 4px;
+        margin: 3px;
+        color: #615d5f;
+      }
+
+      .button {
+        width: 300px;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 5px;
+        border: none;
+        color: #615d5f;
+        font-size: 20px;
+        margin-left: 100px;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      button:hover {
+        opacity: 90%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <form class="container">
+          <label
+            ><span>Name:</span
+            ><input type="text" placeholder="your name" required
+          /></label>
+          <label
+            ><span>Email:</span
+            ><input type="email" placeholder="your email" required
+          /></label>
+          <label
+            ><span>Password:</span><input type="password" required
+          /></label>
+          <label><span>Phone Number:</span><input type="tel" required /></label>
+          <label
+            ><span>Gender:</span>
+            <div class="gender">
+              <label
+                >Male: <input type="radio" name="question" required
+              /></label>
+              <label>Female:<input type="radio" name="question" /></label>
+              <label>Other: <input type="radio" name="question" /></label>
+            </div>
+          </label>
+          <label
+            ><span>Language:</span>
+            <select name="language" id="language">
+              <option value="" selected disabled hidden>Select language</option>
+              <option value="tamil">Tamil</option>
+              <option value="english">English</option>
+              <option value="hindi">Hindi</option>
+            </select></label
+          >
+          <label
+            ><span>ZipCode:</span
+            ><input type="number" required placeholder="Your zipcode"
+          /></label>
+          <label
+            ><span>About:</span
+            ><textarea
+              placeholder="Write about yourself..."
+              style="font-size: small"
+            ></textarea>
+          </label>
+          <button type="submit" class="button">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
